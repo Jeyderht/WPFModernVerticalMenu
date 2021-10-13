@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="WPFModernVerticalMenu.Controls.UserPopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFModernVerticalMenu.Controls"
+             mc:Ignorable="d">
+    
+    <UserControl.Style>
+        <Style>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" Duration="00:00:02" From="0" To="1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <Trigger Property="FrameworkElement.Visibility" Value="Collapsed">
+                    <Setter Property="FrameworkElement.Opacity" Value="0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Style>
+    
+    <Grid>
+        <!-- Start: Popup User Control -->
+        <Border x:Name="Conatiner" CornerRadius="5" Width="Auto" Height="30" Margin="10 0 0 0" Background="{DynamicResource PrimaryBlueColor}" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Star: Reusable Text -->
+            <TextBlock x:Name="PopupText" FontSize="14" FontWeight="Regular" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 5 10 5"/>
+            <!-- Star: Reusable Text -->
+        </Border>
+        <!-- End: Popup User Control -->
+    </Grid>
+    
+</UserControl>
