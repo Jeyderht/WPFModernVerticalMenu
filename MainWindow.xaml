@@ -11,6 +11,9 @@
         Background="Transparent" AllowsTransparency="True"
         ResizeMode="NoResize" FontFamily="Poppins">
 
+        <!-- By Jeyderht 
+        Subscribe: https://www.youtube.com/channel/UC9di50E_9m9pQcZPxzFqYUA/about
+        -->
     <Border Background="{DynamicResource PrimaryBackgroundColor}"
             CornerRadius="8">
         <Grid>
